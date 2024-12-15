@@ -76,6 +76,16 @@ namespace Student_Grade
         {
             lblError_reset();
         }
+
+        private void txtMark_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnAdd_Click(sender, e);
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }
 

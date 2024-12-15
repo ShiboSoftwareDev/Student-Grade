@@ -55,6 +55,7 @@
             txtMark.Size = new Size(148, 23);
             txtMark.TabIndex = 0;
             txtMark.TextChanged += txtMark_TextChanged;
+            txtMark.KeyDown += txtMark_KeyDown;
             // 
             // btnAdd
             // 
