@@ -29,181 +29,207 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            listBox1 = new ListBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            txtMark = new TextBox();
+            btnAdd = new Button();
+            grpMarks = new GroupBox();
+            lstMarks = new ListBox();
+            grpGrade = new GroupBox();
+            lblGradeResult = new Label();
+            lblMinResult = new Label();
+            lblMaxResult = new Label();
+            lblGrade = new Label();
+            lblMin = new Label();
+            lblMax = new Label();
+            btnGrade = new Button();
+            btnNew = new Button();
+            btnExit = new Button();
+            lblError = new Label();
+            grpMarks.SuspendLayout();
+            grpGrade.SuspendLayout();
             SuspendLayout();
             // 
-            // groupBox1
+            // txtMark
             // 
-            groupBox1.Controls.Add(listBox1);
-            groupBox1.Location = new Point(47, 38);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(249, 190);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            txtMark.Location = new Point(58, 30);
+            txtMark.Name = "txtMark";
+            txtMark.Size = new Size(148, 23);
+            txtMark.TabIndex = 0;
+            txtMark.TextChanged += txtMark_TextChanged;
             // 
-            // groupBox2
+            // btnAdd
             // 
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Location = new Point(76, 297);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(200, 100);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "groupBox2";
+            btnAdd.Location = new Point(227, 29);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(75, 23);
+            btnAdd.TabIndex = 1;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
-            // button1
+            // grpMarks
             // 
-            button1.Location = new Point(27, 447);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            grpMarks.Controls.Add(lstMarks);
+            grpMarks.Location = new Point(68, 96);
+            grpMarks.Name = "grpMarks";
+            grpMarks.Size = new Size(281, 202);
+            grpMarks.TabIndex = 2;
+            grpMarks.TabStop = false;
+            grpMarks.Text = "Marks";
             // 
-            // button2
+            // lstMarks
             // 
-            button2.Location = new Point(108, 447);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 3;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            lstMarks.FormattingEnabled = true;
+            lstMarks.ItemHeight = 15;
+            lstMarks.Location = new Point(16, 47);
+            lstMarks.Name = "lstMarks";
+            lstMarks.Size = new Size(228, 124);
+            lstMarks.TabIndex = 0;
+            lstMarks.TabStop = false;
             // 
-            // button3
+            // grpGrade
             // 
-            button3.Location = new Point(189, 447);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 4;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            grpGrade.Controls.Add(lblGradeResult);
+            grpGrade.Controls.Add(lblMinResult);
+            grpGrade.Controls.Add(lblMaxResult);
+            grpGrade.Controls.Add(lblGrade);
+            grpGrade.Controls.Add(lblMin);
+            grpGrade.Controls.Add(lblMax);
+            grpGrade.Location = new Point(75, 315);
+            grpGrade.Name = "grpGrade";
+            grpGrade.Size = new Size(274, 134);
+            grpGrade.TabIndex = 3;
+            grpGrade.TabStop = false;
+            grpGrade.Text = "Grade";
             // 
-            // button4
+            // lblGradeResult
             // 
-            button4.Location = new Point(270, 447);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 5;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            lblGradeResult.BorderStyle = BorderStyle.FixedSingle;
+            lblGradeResult.Location = new Point(168, 87);
+            lblGradeResult.Name = "lblGradeResult";
+            lblGradeResult.Size = new Size(100, 23);
+            lblGradeResult.TabIndex = 5;
             // 
-            // listBox1
+            // lblMinResult
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(15, 25);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(214, 139);
-            listBox1.TabIndex = 0;
+            lblMinResult.BorderStyle = BorderStyle.FixedSingle;
+            lblMinResult.Location = new Point(168, 59);
+            lblMinResult.Name = "lblMinResult";
+            lblMinResult.Size = new Size(100, 23);
+            lblMinResult.TabIndex = 4;
             // 
-            // label1
+            // lblMaxResult
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(109, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            lblMaxResult.BorderStyle = BorderStyle.FixedSingle;
+            lblMaxResult.Location = new Point(168, 33);
+            lblMaxResult.Name = "lblMaxResult";
+            lblMaxResult.Size = new Size(100, 23);
+            lblMaxResult.TabIndex = 3;
             // 
-            // label2
+            // lblGrade
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(108, 47);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
+            lblGrade.AutoSize = true;
+            lblGrade.Location = new Point(56, 88);
+            lblGrade.Name = "lblGrade";
+            lblGrade.Size = new Size(38, 15);
+            lblGrade.TabIndex = 2;
+            lblGrade.Text = "Grade";
             // 
-            // label3
+            // lblMin
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(108, 69);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 2;
-            label3.Text = "label3";
+            lblMin.AutoSize = true;
+            lblMin.Location = new Point(56, 60);
+            lblMin.Name = "lblMin";
+            lblMin.Size = new Size(74, 15);
+            lblMin.TabIndex = 1;
+            lblMin.Text = "Lowest Mark";
             // 
-            // label4
+            // lblMax
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(20, 27);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 3;
-            label4.Text = "label4";
+            lblMax.AutoSize = true;
+            lblMax.Location = new Point(56, 34);
+            lblMax.Name = "lblMax";
+            lblMax.Size = new Size(78, 15);
+            lblMax.TabIndex = 0;
+            lblMax.Text = "Highest Mark";
             // 
-            // label5
+            // btnGrade
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(18, 47);
-            label5.Name = "label5";
-            label5.Size = new Size(38, 15);
-            label5.TabIndex = 4;
-            label5.Text = "label5";
+            btnGrade.Location = new Point(37, 479);
+            btnGrade.Name = "btnGrade";
+            btnGrade.Size = new Size(132, 23);
+            btnGrade.TabIndex = 4;
+            btnGrade.Text = "Grade";
+            btnGrade.UseVisualStyleBackColor = true;
+            btnGrade.Click += btnGrade_Click;
             // 
-            // label6
+            // btnNew
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(10, 73);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 5;
-            label6.Text = "label6";
+            btnNew.Location = new Point(188, 482);
+            btnNew.Name = "btnNew";
+            btnNew.Size = new Size(75, 23);
+            btnNew.TabIndex = 5;
+            btnNew.Text = "New";
+            btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnNew_Click;
+            // 
+            // btnExit
+            // 
+            btnExit.Location = new Point(286, 482);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(75, 23);
+            btnExit.TabIndex = 6;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.ForeColor = Color.Red;
+            lblError.Location = new Point(68, 68);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(0, 15);
+            lblError.TabIndex = 7;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(406, 546);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            Controls.Add(lblError);
+            Controls.Add(btnExit);
+            Controls.Add(btnNew);
+            Controls.Add(btnGrade);
+            Controls.Add(grpGrade);
+            Controls.Add(grpMarks);
+            Controls.Add(btnAdd);
+            Controls.Add(txtMark);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Student Grade";
-            groupBox1.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
+            grpMarks.ResumeLayout(false);
+            grpGrade.ResumeLayout(false);
+            grpGrade.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private ListBox listBox1;
-        private GroupBox groupBox2;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private TextBox txtMark;
+        private Button btnAdd;
+        private GroupBox grpMarks;
+        private ListBox lstMarks;
+        private GroupBox grpGrade;
+        private Label lblGrade;
+        private Label lblMin;
+        private Label lblMax;
+        private Button btnGrade;
+        private Button btnNew;
+        private Button btnExit;
+        private Label lblGradeResult;
+        private Label lblMinResult;
+        private Label lblMaxResult;
+        private Label lblError;
     }
 }
