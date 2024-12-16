@@ -212,7 +212,9 @@
             Controls.Add(grpMarks);
             Controls.Add(btnAdd);
             Controls.Add(txtMark);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Student Grade";
             grpMarks.ResumeLayout(false);
